@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html>
+    
+ <head>
+     <title>{Title}</title>
+     
+    
+    
+     
+    <!-- Begin Internal Stylesheet -->
+     
+     <style type="text/css">
+     
+    body {
+       background-color: #F7BED1;
+       margin: auto;
+       font-family: 'Times New Roman', 'Times', serif
+       width 500px;
+    }
+    
+    h1 {
+        text-align: center;
+        font-size: 100px;
+        color: #ffffff;
+        font-family: 'Times New Roman', 'Times', serif;
+        margin-bottom: -5px;
+    }
+    
+    h2 {
+        text-align: center;
+        color: #ffffff;
+        font-size: 30px
+        font-family: 'Times New Roman';
+        
+    }
+    
+    a {
+       text-decoration: none;
+       color: #ffffff;
+    }
+   
+    a:hover {
+       color: #A6A1A4;
+       text-decoration: bold;
+    }
+   
+   nav {
+       position: top;
+       width: 200px;
+       height: -5px;
+       display: block;
+       text-align: center;
+       word-spacing: 5px;
+       font-family: 'Times New Roman';
+       word-spacing: 20px;
+       margin: auto;
+   }
+   
+   img {
+       height: auto;
+       width: 400px;
+       padding-bottom: 0px;
+   }
+   
+   section {
+       background-color: white;
+       font-family: 'Times New Roman' 'Times', serif;
+       width: 400px;
+       height: auto;
+       margin: auto;
+   }
+   
+   .clear {
+       clear: both;
+   }
+   
+   .typeface {
+       font-family: 'Times New Roman', 'Times', serif;
+       text-align: center;
+       margin: auto;
+       padding: 10px;
+       color: #A6A1A4;
+       
+   }
+   
+   .img {
+       text-align: center;
+       
+   }
+   
+    @fontface {
+        src: url('helvetica.ttf')
+        font-family: 'helvetica'
+    }
+   
+     </style>
+     
+    <!-- End Internal Stylesheet -->
+     
+ </head>  
+  
+    
+<body>
+    
+    <!-- Header --> 
+
+    <header>
+  
+        <div style="clear: both;"></div>
+  
+            <h1> {Title} </h1>
+            <h2> {Description} </h2>
+    
+        <!-- Navigation Bar -->
+
+        <div>
+            <nav>
+                <a href="http://www.alstraus.tumblr.com">Home</a> 
+                <a href="">Message</a>
+                <a href="">Archive</a>
+            </nav>
+        </div>
+        
+        <!-- End Navigation Bar -->
+            
+    </header>
+    
+    <!-- End Header -->
+    
+    <div class="clear">
+        {block:Posts}
+        <section>
+        
+        <!-- Text Posts -->
+        {block:Text}
+        
+        <h2>{Title}</h2>
+        
+        <div class="typeface">
+        {body}
+        </div>
+        
+        {/block:Text}
+    </div>
+        <!-- End Text Posts -->
+        
+        <!-- Photo Posts -->
+        {block:Photo}
+        <p class="img">
+        <img src="{PhotoURL-HighRes}">
+        </p>
+        {/block:Photo}
+        <!-- End Photo Posts -->
+        </section>
+        {/block:Posts}
+    
+    
+    
+</body>
+    
+    
+</html>
